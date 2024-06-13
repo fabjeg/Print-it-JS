@@ -80,14 +80,22 @@ function handleClick(direction) {
 //clique droit
 
 function arrowright() {
-  clickright.addEventListener("click", (events) => handleClick("right"));
+  clickright.addEventListener("click", (event) => handleClick("right"));
 }
-
 //clique gauche
 
 function arrowleft() {
-  clickleft.addEventListener("click", (e) => handleClick("left"));
+  clickleft.addEventListener("click", (event) => handleClick("left"));
 }
+
+clickright.addEventListener("click", (event) => {
+  console.log("je suis dans le click droit", event);
+});
+
+clickleft.addEventListener("click", (event) => {
+  console.log("je suis dans le click gauche", event);
+});
+
 displaydots();
 arrowright();
 arrowleft();
